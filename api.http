@@ -1,0 +1,40 @@
+
+### obtener todas las peliculas
+GET http://localhost:1234/movies
+
+### obtener una pelicula en especifico
+
+GET http://localhost:1234/movies/04986507-b3ed-442c-8ae7-4c5df804f896
+
+### recupera una pelicula en especifico por un genero y titulo de la pelicula
+
+GET http://localhost:1234/movies?genre=Action&search=The Dark Knight
+
+### recupero todas las peliculas por un genero en especifico
+GET http://localhost:1234/movies?genre=terror
+
+### crear una pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+   "title": "La habitacion 1408",
+  "year": 2007,
+  "director": "Mikael Håfström",
+  "duration": 104,
+  "poster": "https://es.web.img3.acsta.net/medias/nmedia/18/69/51/94/20051367.jpg",
+  "genre": [
+    "Terror", 
+    "Sobrenatural"
+  ]
+}
+
+### actualizar una pelicula en especifico
+
+PATCH http://localhost:1234/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+Content-Type: application/json
+
+{
+  "year":2019,
+}
+
